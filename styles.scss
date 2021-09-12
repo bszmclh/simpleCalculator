@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Digital Numbers Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Digital Numbers Regular'), url('./assets/DigitalNumbers-Regular.woff') format('woff');
+}
+
+h1 {
+    font-family: 'Digital Numbers Regular';
+}
