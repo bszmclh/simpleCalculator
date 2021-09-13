@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
 @font-face {
   font-family: 'Digital Numbers Regular';
   font-style: normal;
@@ -5,7 +6,112 @@
   src: local("Digital Numbers Regular"), url("./assets/DigitalNumbers-Regular.woff") format("woff");
 }
 
-h1 {
+body {
+  background: #b2b2b9;
+}
+
+#container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+#author {
+  padding-top: 5px;
+  text-align: center;
+}
+
+#display, #history {
   font-family: 'Digital Numbers Regular';
+  height: 40px;
+  text-align: right;
+  border: 1px solid #616161;
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 20px;
+  padding-top: 10px;
+  background-color: #afafaf;
+  -webkit-box-shadow: inset 1px 1px 5px gray;
+          box-shadow: inset 1px 1px 5px gray;
+  margin-bottom: 5px;
+}
+
+#history {
+  padding-top: 10px;
+  font-size: 15px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 3px;
+  word-wrap: break-word;
+}
+
+#calculator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 360px;
+  height: 460px;
+  background-color: #494949;
+  padding: 5px;
+  border: 3px solid #585858;
+  -webkit-box-shadow: 0 3px 5px #3f3f3f;
+          box-shadow: 0 3px 5px #3f3f3f;
+}
+
+#pad {
+  display: inline-block;
+}
+
+button {
+  display: inline;
+  width: 90px;
+  height: 72px;
+  background-color: #8d8d8d;
+  font-family: 'Unica One', monospace;
+  font-size: 30px;
+  color: white;
+  border: 0.5px solid #494949;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:active,
+button.active {
+  opacity: 0.5;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.horizontal {
+  width: 180px;
 }
 /*# sourceMappingURL=styles.css.map */

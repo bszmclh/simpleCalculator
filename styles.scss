@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
 @font-face {
     font-family: 'Digital Numbers Regular';
     font-style: normal;
@@ -5,6 +6,86 @@
     src: local('Digital Numbers Regular'), url('./assets/DigitalNumbers-Regular.woff') format('woff');
 }
 
-h1 {
+body {
+    background: rgb(178, 178, 185);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#author {
+    padding-top: 5px;
+    text-align: center;
+}
+
+#display {
     font-family: 'Digital Numbers Regular';
+    height: 40px;
+    text-align: right;
+    border: 1px solid rgb(97, 97, 97);
+    width: 100%;
+    user-select: none;
+    font-size: 20px;
+    padding-top: 10px;
+    background-color: rgb(175, 175, 175);
+    box-shadow: inset 1px 1px 5px gray;
+    margin-bottom: 5px;
+}
+
+#history {
+    @extend #display;
+    padding-top: 10px;
+    font-size: 15px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 3px;
+    word-wrap: break-word;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 360px;
+    height: 460px;
+    background-color: rgb(73, 73, 73);
+    padding: 5px;
+    border: 3px solid rgb(88, 88, 88);
+    box-shadow: 0 3px 5px rgb(63, 63, 63);
+}
+
+#pad {
+    display: inline-block;
+}
+
+button {
+    display: inline;
+    width: 90px;
+    height: 72px;
+    background-color: rgb(141, 141, 141);
+    font-family: 'Unica One', monospace;
+    font-size: 30px;
+    color: white;
+    border: 0.5px solid rgb(73, 73, 73);
+    transition-duration: 0.4s;
+    user-select: none;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:active,
+button.active {
+    opacity: 0.5;
+    transition-duration: 0.2s;
+}
+
+.horizontal {
+    width: 180px;
 }
