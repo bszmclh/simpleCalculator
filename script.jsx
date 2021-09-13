@@ -198,8 +198,8 @@ class App extends React.Component {
                     break;
 
                 case 'Enter':
-                    if(this.state.history !== '' && !/\.$/.test(this.state.history) && !/=/.test(this.state.history)){
-                       if((/(^|\))[^(]*$/).test(this.state.history)){
+                    if(this.state.history !== '' && !/\.$/.test(this.state.history) && !/=/.test(this.state.history) && !/\(\-$/.test(this.state.history)){
+                       if((/(^|\))[^(]*[\d]$/).test(this.state.history)){
                            this.setState(state =>({
                                history: state.history + "=" + strip(eval(state.history)),
                                input: strip(eval(state.history))
